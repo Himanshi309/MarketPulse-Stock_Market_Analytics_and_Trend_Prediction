@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MarketPulse – Stock Analytics Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+:root{
+  --bg:#0d1117;--surface:#161b22;--card:#1c2128;--border:#30363d;
+  --text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;
+  --red:#f85149;--yellow:#d29922;--purple:#bc8cff;--orange:#ffa657;
+  --font:"Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+
+/* ── Layout ─────────────────────────────── */
+.layout{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+
+/* ── Sidebar ─────────────────────────────── */
+.sidebar{background:var(--surface);border-right:1px solid var(--border);
+  padding:0;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar-brand{padding:20px 18px 16px;border-bottom:1px solid var(--border)}
+.sidebar-brand h1{font-size:18px;font-weight:700;color:var(--accent)}
+.sidebar-brand span{font-size:11px;color:var(--muted);display:block;margin-top:2px}
+.nav-section{padding:12px 0 4px 16px;font-size:10px;text-transform:uppercase;
+  letter-spacing:1px;color:var(--muted);font-weight:600}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 18px;cursor:pointer;
+  transition:background .15s;border-left:3px solid transparent;font-size:13px;color:var(--muted)}
+.nav-item:hover{background:rgba(88,166,255,.07);color:var(--text)}
+.nav-item.active{background:rgba(88,166,255,.12);color:var(--accent);border-left-color:var(--accent)}
+.nav-icon{font-size:16px;width:20px;text-align:center}
+.ticker-list{padding:8px 0}
+.ticker-btn{display:flex;align-items:center;justify-content:space-between;
+  padding:7px 18px;cursor:pointer;font-size:12px;transition:background .15s;
+  border-left:3px solid transparent;color:var(--muted)}
+.ticker-btn:hover{background:rgba(88,166,255,.07);color:var(--text)}
+.ticker-btn.active{background:rgba(88,166,255,.1);color:var(--accent);border-left-color:var(--accent)}
+.ticker-chip{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600}
+.chip-up{background:rgba(63,185,80,.15);color:var(--green)}
+.chip-down{background:rgba(248,81,73,.15);color:var(--red)}
+
+/* ── Main ─────────────────────────────── */
+.main{display:flex;flex-direction:column;min-height:100vh;overflow:hidden}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:12px 24px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100}
+.topbar-title{font-size:16px;font-weight:600;color:var(--text)}
+.topbar-meta{font-size:12px;color:var(--muted)}
+.page{display:none;padding:24px}
+.page.active{display:block}
+
+/* ── Cards ─────────────────────────────── */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:20px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px}
+.card-title{font-size:12px;text-transform:uppercase;letter-spacing:.8px;
+  color:var(--muted);font-weight:600;margin-bottom:12px}
+.card-value{font-size:26px;font-weight:700;color:var(--text)}
+.card-sub{font-size:12px;color:var(--muted);margin-top:4px}
+.card-change{font-size:14px;font-weight:600;margin-top:6px}
+.up{color:var(--green)}.down{color:var(--red)}.neutral{color:var(--muted)}
+.chart-container{width:100%;height:360px}
+.chart-container-lg{width:100%;height:440px}
+.chart-container-sm{width:100%;height:280px}
+
+/* ── Period selector ─────────────────────── */
+.period-row{display:flex;gap:8px;margin-bottom:16px;align-items:center}
+.period-btn{padding:4px 14px;border:1px solid var(--border);border-radius:4px;
+  background:transparent;color:var(--muted);cursor:pointer;font-size:12px;transition:all .15s}
+.period-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ── Table ─────────────────────────────── */
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{padding:9px 12px;text-align:left;font-weight:600;font-size:11px;
+  text-transform:uppercase;letter-spacing:.7px;color:var(--muted);
+  border-bottom:1px solid var(--border)}
+td{padding:9px 12px;border-bottom:1px solid rgba(48,54,61,.6)}
+tr:hover td{background:rgba(88,166,255,.04)}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.badge-up{background:rgba(63,185,80,.15);color:var(--green)}
+.badge-down{background:rgba(248,81,73,.15);color:var(--red)}
+.badge-blue{background:rgba(88,166,255,.15);color:var(--accent)}
+
+/* ── Predict panel ─────────────────────── */
+.predict-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px}
+.signal-display{font-size:36px;font-weight:800;margin:16px 0 6px}
+.signal-buy{color:var(--green)}.signal-hold{color:var(--yellow)}
+.prob-bar{height:10px;border-radius:5px;background:var(--border);margin:10px 0;overflow:hidden}
+.prob-fill{height:100%;border-radius:5px;transition:width .6s ease;background:var(--green)}
+.predict-select{padding:8px 14px;background:var(--surface);border:1px solid var(--border);
+  color:var(--text);border-radius:6px;font-size:13px;cursor:pointer;width:100%;margin-bottom:14px}
+.predict-btn{width:100%;padding:10px;background:var(--accent);color:#fff;border:none;
+  border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .15s}
+.predict-btn:hover{opacity:.85}
+
+/* ── Loading / Error ─────────────────────── */
+.loading{color:var(--muted);padding:40px;text-align:center;font-style:italic}
+.error-msg{color:var(--red);padding:12px;font-size:12px}
+
+/* ── Footer ─────────────────────────────── */
+footer{padding:20px 24px;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+
+/* ── Scrollbar ─────────────────────────── */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--surface)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- ══════════════════════ SIDEBAR ══════════════════════ -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <h1>📈 MarketPulse</h1>
+    <span>NSE Analytics &amp; ML Signals</span>
+  </div>
+
+  <div class="nav-section">Navigation</div>
+  <div class="nav-item active" data-page="overview">
+    <span class="nav-icon">🏠</span> Overview
+  </div>
+  <div class="nav-item" data-page="charts">
+    <span class="nav-icon">📊</span> Price Charts
+  </div>
+  <div class="nav-item" data-page="indicators">
+    <span class="nav-icon">📉</span> Indicators
+  </div>
+  <div class="nav-item" data-page="eda">
+    <span class="nav-icon">🔍</span> EDA
+  </div>
+  <div class="nav-item" data-page="ml">
+    <span class="nav-icon">🤖</span> ML Models
+  </div>
+  <div class="nav-item" data-page="backtest">
+    <span class="nav-icon">⏳</span> Backtesting
+  </div>
+  <div class="nav-item" data-page="predict">
+    <span class="nav-icon">🎯</span> Live Predict
+  </div>
+
+  <div class="nav-section">Stocks</div>
+  <div class="ticker-list" id="tickerList"></div>
+
+  <div style="flex:1"></div>
+  <div style="padding:12px 18px;font-size:11px;color:var(--muted);border-top:1px solid var(--border)">
+    Data: NSE via yfinance<br>Models: LightGBM / XGBoost / RF
+  </div>
+</aside>
+
+<!-- ══════════════════════ MAIN ══════════════════════ -->
+<div class="main">
+  <div class="topbar">
+    <div class="topbar-title" id="pageTitle">Market Overview</div>
+    <div class="topbar-meta" id="topbarMeta">Loading…</div>
+  </div>
+
+  <!-- ── Overview ── -->
+  <div class="page active" id="page-overview">
+    <div class="grid-4" id="overviewCards"><div class="loading">Loading market data…</div></div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Normalised Price Performance (All Tickers)</div>
+        <div class="chart-container-lg" id="chartPerf"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">30-Day Rolling Volatility</div>
+        <div class="chart-container-lg" id="chartVol"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Return Correlation Matrix</div>
+      <div class="chart-container" id="chartCorr"></div>
+    </div>
+  </div>
+
+  <!-- ── Price Charts ── -->
+  <div class="page" id="page-charts">
+    <div class="period-row">
+      <span style="color:var(--muted);font-size:12px;margin-right:4px">Period:</span>
+      <button class="period-btn" data-p="1Y">1Y</button>
+      <button class="period-btn active" data-p="2Y">2Y</button>
+      <button class="period-btn" data-p="5Y">5Y</button>
+      <button class="period-btn" data-p="ALL">All</button>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-title" id="candleTitle">Candlestick Chart</div>
+      <div class="chart-container-lg" id="chartCandle"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Volume</div>
+      <div class="chart-container-sm" id="chartVolume"></div>
+    </div>
+  </div>
+
+  <!-- ── Indicators ── -->
+  <div class="page" id="page-indicators">
+    <div class="grid-2" style="margin-bottom:0">
+      <div class="card">
+        <div class="card-title">RSI-14 (Relative Strength Index)</div>
+        <div class="chart-container" id="chartRsi"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">MACD (12,26,9)</div>
+        <div class="chart-container" id="chartMacd"></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:16px">
+      <div class="card">
+        <div class="card-title">Bollinger Bands</div>
+        <div class="chart-container" id="chartBB"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">ADX / DI+ / DI-</div>
+        <div class="chart-container" id="chartAdx"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── EDA ── -->
+  <div class="page" id="page-eda">
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Daily Return Distribution</div>
+        <div class="chart-container" id="chartRetDist"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Cumulative Return Comparison</div>
+        <div class="chart-container" id="chartCumRet"></div>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-title">EDA Summary Statistics</div>
+      <div class="table-wrap" id="edaTable"></div>
+    </div>
+  </div>
+
+  <!-- ── ML Models ── -->
+  <div class="page" id="page-ml">
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-title">Model Performance – Walk-Forward CV (5 Folds)</div>
+      <div class="table-wrap" id="mlTable"></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">ROC-AUC by Model &amp; Ticker</div>
+        <div class="chart-container" id="chartAuc"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Accuracy by Model &amp; Ticker</div>
+        <div class="chart-container" id="chartAcc"></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="card-title">ML Prediction Accuracy – Test Set</div>
+      <div class="chart-container" id="chartPredAcc"></div>
+    </div>
+  </div>
+
+  <!-- ── Backtest ── -->
+  <div class="page" id="page-backtest">
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-title">Backtest Summary – ML Strategy vs Buy &amp; Hold</div>
+      <div class="table-wrap" id="btTable"></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Total Return Comparison (%)</div>
+        <div class="chart-container" id="chartBtReturn"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Sharpe Ratio – ML Strategy</div>
+        <div class="chart-container" id="chartBtSharpe"></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:16px">
+      <div class="card">
+        <div class="card-title">Max Drawdown (%)</div>
+        <div class="chart-container" id="chartBtDD"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Win Rate (%)</div>
+        <div class="chart-container" id="chartWinRate"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Live Predict ── -->
+  <div class="page" id="page-predict">
+    <div class="grid-3">
+      <div class="predict-card">
+        <div class="card-title">Live ML Signal</div>
+        <select class="predict-select" id="predictSelect">
+          <option value="RELIANCE.NS">Reliance Industries</option>
+          <option value="TCS.NS">TCS</option>
+          <option value="INFY.NS">Infosys</option>
+          <option value="HDFCBANK.NS">HDFC Bank</option>
+          <option value="ICICIBANK.NS">ICICI Bank</option>
+        </select>
+        <button class="predict-btn" id="predictBtn">🔮 Get Signal</button>
+        <div id="predictResult" style="margin-top:16px"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Prediction History (Test Set)</div>
+        <div class="chart-container" id="chartPredHist"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Signal Accuracy Over Time</div>
+        <div class="chart-container" id="chartSigAcc"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    MarketPulse &mdash; NSE Stock Market Analytics &amp; Trend Prediction &nbsp;|&nbsp;
+    Data: Yahoo Finance via yfinance &nbsp;|&nbsp;
+    Models: LightGBM · XGBoost · Random Forest · Logistic Regression
+  </footer>
+</div><!-- /main -->
+</div><!-- /layout -->
+
+<script>
+const API = "http://localhost:5000/api";
+const TICKERS = ["RELIANCE.NS","TCS.NS","INFY.NS","HDFCBANK.NS","ICICIBANK.NS"];
+const NAMES   = {
+  "RELIANCE.NS":"Reliance","TCS.NS":"TCS","INFY.NS":"Infosys",
+  "HDFCBANK.NS":"HDFC Bank","ICICIBANK.NS":"ICICI Bank"
+};
+const COLORS = ["#58a6ff","#f85149","#3fb950","#ffa657","#bc8cff"];
+let activeTicker = "RELIANCE.NS";
+let activePeriod = "2Y";
+let charts = {};
+
+// ── ECharts helpers ──────────────────────────────────────────────────────────
+function mkChart(id){
+  const el = document.getElementById(id);
+  if(!el) return null;
+  if(charts[id]){ charts[id].dispose(); }
+  charts[id] = echarts.init(el,"dark",{backgroundColor:"transparent"});
+  return charts[id];
+}
+const axisStyle = {axisLine:{lineStyle:{color:"#30363d"}},
+  axisLabel:{color:"#8b949e"},splitLine:{lineStyle:{color:"#21262d"}}};
+const tooltipStyle = {backgroundColor:"#1c2128",borderColor:"#30363d",
+  textStyle:{color:"#e6edf3",fontSize:12}};
+
+// ── Fetch helpers ────────────────────────────────────────────────────────────
+async function fetchJSON(url){
+  try{
+    const r = await fetch(url);
+    if(!r.ok) throw new Error(r.statusText);
+    return await r.json();
+  } catch(e){ console.error(url,e); return null; }
+}
+
+// ── Navigation ───────────────────────────────────────────────────────────────
+const pageNames = {overview:"Market Overview",charts:"Price Charts",
+  indicators:"Technical Indicators",eda:"Exploratory Data Analysis",
+  ml:"ML Models",backtest:"Backtesting",predict:"Live Prediction"};
+
+document.querySelectorAll(".nav-item").forEach(el=>{
+  el.addEventListener("click",()=>{
+    const p = el.dataset.page;
+    document.querySelectorAll(".nav-item").forEach(x=>x.classList.remove("active"));
+    el.classList.add("active");
+    document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
+    document.getElementById("page-"+p).classList.add("active");
+    document.getElementById("pageTitle").textContent = pageNames[p]||p;
+    loadPage(p);
+  });
+});
+
+// Period buttons
+document.querySelectorAll(".period-btn").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".period-btn").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    activePeriod = b.dataset.p;
+    loadCharts();
+  });
+});
+
+// ── Ticker sidebar ───────────────────────────────────────────────────────────
+async function buildTickerList(){
+  const ov = await fetchJSON(`${API}/overview`);
+  const list = document.getElementById("tickerList");
+  list.innerHTML="";
+  if(!ov) return;
+  ov.forEach(item=>{
+    const d = document.createElement("div");
+    d.className="ticker-btn"+(item.ticker===activeTicker?" active":"");
+    d.dataset.ticker = item.ticker;
+    const updown = item.change_pct >= 0;
+    d.innerHTML=`<span>${NAMES[item.ticker]||item.ticker}</span>
+      <span class="ticker-chip ${updown?"chip-up":"chip-down"}">${item.change_pct>0?"+":""}${item.change_pct}%</span>`;
+    d.addEventListener("click",()=>{
+      activeTicker=item.ticker;
+      document.querySelectorAll(".ticker-btn").forEach(x=>x.classList.remove("active"));
+      d.classList.add("active");
+      refreshActivePage();
+    });
+    list.appendChild(d);
+  });
+}
+
+function refreshActivePage(){
+  const active = document.querySelector(".page.active");
+  if(active){
+    const id = active.id.replace("page-","");
+    loadPage(id);
+  }
+}
+
+// ── Overview Page ────────────────────────────────────────────────────────────
+async function loadOverview(){
+  const ov = await fetchJSON(`${API}/overview`);
+  if(!ov) return;
+
+  // KPI cards
+  const container = document.getElementById("overviewCards");
+  container.innerHTML="";
+  ov.forEach((item,i)=>{
+    const up = item.change_pct >= 0;
+    const div = document.createElement("div");
+    div.className="card";
+    div.innerHTML=`<div class="card-title">${item.name}</div>
+      <div class="card-value">₹${item.close.toLocaleString("en-IN")}</div>
+      <div class="card-change ${up?"up":"down"}">${up?"▲":"▼"} ${item.change_pct}%</div>
+      <div class="card-sub">Vol: ${(item.volume/1e5).toFixed(2)}L | ${item.date}</div>`;
+    container.appendChild(div);
+  });
+
+  // Normalised performance chart
+  const allPrices = await Promise.all(TICKERS.map(t=>fetchJSON(`${API}/prices?ticker=${t}&period=ALL`)));
+  const perfChart = mkChart("chartPerf");
+  if(perfChart && allPrices[0]){
+    const series = allPrices.map((prices,i)=>{
+      if(!prices||!prices.length) return null;
+      const base = prices[0].close;
+      return {
+        name:NAMES[TICKERS[i]],type:"line",smooth:true,symbol:"none",
+        lineStyle:{width:2,color:COLORS[i]},
+        data:prices.map(d=>[d.date, +((d.close/base*100).toFixed(2))])
+      };
+    }).filter(Boolean);
+    perfChart.setOption({tooltip:{...tooltipStyle,trigger:"axis"},
+      legend:{textStyle:{color:"#8b949e"},bottom:0},
+      xAxis:{type:"time",...axisStyle},
+      yAxis:{type:"value",...axisStyle,name:"Index",nameTextStyle:{color:"#8b949e"}},
+      grid:{top:10,right:20,bottom:50,left:60},series});
+  }
+
+  // Rolling volatility
+  const volChart = mkChart("chartVol");
+  if(volChart && allPrices[0]){
+    const series = allPrices.map((prices,i)=>{
+      if(!prices||prices.length<30) return null;
+      const rets = prices.map((d,j)=>j===0?0:(d.close-prices[j-1].close)/prices[j-1].close);
+      // rolling 30-day std annualised
+      const data = prices.slice(29).map((d,j)=>{
+        const slice = rets.slice(j,j+30);
+        const std = Math.sqrt(slice.reduce((s,v)=>s+(v*v),0)/30)*Math.sqrt(252)*100;
+        return [d.date, +std.toFixed(2)];
+      });
+      return {name:NAMES[TICKERS[i]],type:"line",smooth:true,symbol:"none",
+        lineStyle:{width:1.5,color:COLORS[i]},data};
+    }).filter(Boolean);
+    volChart.setOption({tooltip:{...tooltipStyle,trigger:"axis"},
+      legend:{textStyle:{color:"#8b949e"},bottom:0},
+      xAxis:{type:"time",...axisStyle},
+      yAxis:{type:"value",...axisStyle,name:"Annualised Vol%",nameTextStyle:{color:"#8b949e"}},
+      grid:{top:10,right:20,bottom:50,left:65},series});
+  }
+
+  // Correlation heatmap
+  const corrData = await fetchJSON(`${API}/correlation`);
+  if(corrData){
+    const corrChart = mkChart("chartCorr");
+    const tks = corrData.tickers.map(t=>NAMES[t]||t);
+    const mat = corrData.matrix;
+    const data = [];
+    mat.forEach((row,i)=>row.forEach((v,j)=>data.push([j,i,v])));
+    corrChart.setOption({
+      tooltip:{...tooltipStyle,trigger:"item",
+        formatter:p=>`${tks[p.value[1]]} × ${tks[p.value[0]]}: ${p.value[2].toFixed(3)}`},
+      xAxis:{type:"category",data:tks,axisLabel:{color:"#8b949e",rotate:15},
+        axisLine:{lineStyle:{color:"#30363d"}}},
+      yAxis:{type:"category",data:tks,axisLabel:{color:"#8b949e"},
+        axisLine:{lineStyle:{color:"#30363d"}}},
+      visualMap:{min:-1,max:1,calculable:true,orient:"horizontal",left:"center",bottom:0,
+        inRange:{color:["#f85149","#21262d","#3fb950"]},textStyle:{color:"#8b949e"}},
+      series:[{type:"heatmap",data,label:{show:true,formatter:p=>p.value[2].toFixed(2),
+        fontSize:12,color:"#e6edf3"}}],
+      grid:{top:10,right:20,bottom:80,left:80}
+    });
+  }
+}
+
+// ── Price Chart Page ─────────────────────────────────────────────────────────
+async function loadCharts(){
+  document.getElementById("candleTitle").textContent =
+    `${NAMES[activeTicker]||activeTicker} – Candlestick (${activePeriod})`;
+  const prices = await fetchJSON(`${API}/prices?ticker=${activeTicker}&period=${activePeriod}`);
+  if(!prices||!prices.length) return;
+
+  // Candlestick
+  const c = mkChart("chartCandle");
+  c.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis",axisPointer:{type:"cross"},
+      formatter:params=>{
+        const bar = params.find(p=>p.seriesType==="candlestick");
+        if(!bar) return "";
+        const [o,c2,l,h] = bar.data.slice(1);
+        return `${bar.axisValue}<br>O:${o} H:${h} L:${l} C:${c2}`;
+      }},
+    dataZoom:[{type:"inside",start:70,end:100},{type:"slider",height:24,bottom:0,
+      borderColor:"#30363d",fillerColor:"rgba(88,166,255,.1)",
+      handleStyle:{color:"#58a6ff"},textStyle:{color:"#8b949e"}}],
+    xAxis:{type:"category",data:prices.map(d=>d.date),axisLabel:{color:"#8b949e",
+      formatter:v=>v.slice(0,10)},axisLine:{lineStyle:{color:"#30363d"}},
+      splitLine:{show:false}},
+    yAxis:{type:"value",...axisStyle,scale:true},
+    grid:{top:10,right:20,bottom:60,left:65},
+    series:[{type:"candlestick",
+      data:prices.map(d=>[d.open,d.close,d.low,d.high]),
+      itemStyle:{color:"#3fb950",color0:"#f85149",
+        borderColor:"#3fb950",borderColor0:"#f85149"}}]
+  });
+
+  // Volume
+  const v = mkChart("chartVolume");
+  v.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    dataZoom:[{type:"inside",start:70,end:100}],
+    xAxis:{type:"category",data:prices.map(d=>d.date),axisLabel:{color:"#8b949e",
+      formatter:v=>v.slice(0,10)},axisLine:{lineStyle:{color:"#30363d"}},splitLine:{show:false}},
+    yAxis:{type:"value",...axisStyle,
+      axisLabel:{color:"#8b949e",formatter:v=>(v/1e6).toFixed(1)+"M"}},
+    grid:{top:10,right:20,bottom:30,left:65},
+    series:[{type:"bar",data:prices.map(d=>d.volume),
+      itemStyle:{color:p=>prices[p.dataIndex].close>=prices[p.dataIndex].open?"#3fb95060":"#f8514960"}}]
+  });
+}
+
+// ── Indicators Page ──────────────────────────────────────────────────────────
+async function loadIndicators(){
+  const [prices, inds] = await Promise.all([
+    fetchJSON(`${API}/prices?ticker=${activeTicker}&period=2Y`),
+    fetchJSON(`${API}/indicators?ticker=${activeTicker}`)
+  ]);
+  if(!inds||!inds.length) return;
+
+  // RSI
+  const rsiChart = mkChart("chartRsi");
+  rsiChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    xAxis:{type:"category",data:inds.map(d=>d.date),axisLabel:{color:"#8b949e",formatter:v=>v.slice(0,10)},
+      axisLine:{lineStyle:{color:"#30363d"}},splitLine:{show:false}},
+    yAxis:{type:"value",...axisStyle,min:0,max:100},
+    dataZoom:[{type:"inside",start:70,end:100}],
+    grid:{top:20,right:20,bottom:30,left:50},
+    series:[
+      {type:"line",data:inds.map(d=>d.rsi_14),name:"RSI",smooth:true,symbol:"none",
+        lineStyle:{color:"#bc8cff",width:1.5}},
+      {type:"line",data:inds.map(d=>70),name:"Overbought",lineStyle:{color:"#f85149",type:"dashed",width:1},symbol:"none"},
+      {type:"line",data:inds.map(d=>30),name:"Oversold",lineStyle:{color:"#3fb950",type:"dashed",width:1},symbol:"none"},
+    ],
+    legend:{textStyle:{color:"#8b949e"},bottom:0}
+  });
+
+  // MACD
+  const macdChart = mkChart("chartMacd");
+  macdChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    legend:{textStyle:{color:"#8b949e"},bottom:0},
+    dataZoom:[{type:"inside",start:70,end:100}],
+    grid:{top:10,right:20,bottom:40,left:60},
+    xAxis:{type:"category",data:inds.map(d=>d.date),axisLabel:{color:"#8b949e",formatter:v=>v.slice(0,10)},
+      axisLine:{lineStyle:{color:"#30363d"}},splitLine:{show:false}},
+    yAxis:{type:"value",...axisStyle},
+    series:[
+      {name:"MACD",type:"line",data:inds.map(d=>d.macd),smooth:true,symbol:"none",lineStyle:{color:"#58a6ff",width:1.5}},
+      {name:"Signal",type:"line",data:inds.map(d=>d.macd_signal),smooth:true,symbol:"none",lineStyle:{color:"#ffa657",width:1.5}},
+      {name:"Histogram",type:"bar",data:inds.map(d=>d.macd_hist),
+        itemStyle:{color:p=>inds[p.dataIndex].macd_hist>=0?"#3fb950":"#f85149"}},
+    ]
+  });
+
+  // Bollinger Bands
+  const bbChart = mkChart("chartBB");
+  if(prices){
+    const pSlice = prices.slice(-inds.length);
+    bbChart.setOption({
+      tooltip:{...tooltipStyle,trigger:"axis"},
+      legend:{textStyle:{color:"#8b949e"},bottom:0},
+      dataZoom:[{type:"inside",start:70,end:100}],
+      grid:{top:10,right:20,bottom:40,left:65},
+      xAxis:{type:"category",data:inds.map(d=>d.date),axisLabel:{color:"#8b949e",formatter:v=>v.slice(0,10)},
+        axisLine:{lineStyle:{color:"#30363d"}},splitLine:{show:false}},
+      yAxis:{type:"value",...axisStyle,scale:true},
+      series:[
+        {name:"Upper",type:"line",data:inds.map(d=>d.bb_upper),smooth:true,symbol:"none",
+          lineStyle:{color:"#58a6ff",type:"dashed",width:1},areaStyle:{color:"rgba(88,166,255,.04)"}},
+        {name:"Middle",type:"line",data:inds.map(d=>(d.bb_upper+d.bb_lower)/2),smooth:true,symbol:"none",
+          lineStyle:{color:"#8b949e",width:1}},
+        {name:"Lower",type:"line",data:inds.map(d=>d.bb_lower),smooth:true,symbol:"none",
+          lineStyle:{color:"#58a6ff",type:"dashed",width:1}},
+        {name:"Close",type:"line",data:inds.map((d,i)=>pSlice[i]?pSlice[i].close:null),smooth:true,symbol:"none",
+          lineStyle:{color:"#ffa657",width:1.8}},
+      ]
+    });
+  }
+
+  // ADX
+  const adxChart = mkChart("chartAdx");
+  adxChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    legend:{textStyle:{color:"#8b949e"},bottom:0},
+    dataZoom:[{type:"inside",start:70,end:100}],
+    grid:{top:10,right:20,bottom:40,left:50},
+    xAxis:{type:"category",data:inds.map(d=>d.date),axisLabel:{color:"#8b949e",formatter:v=>v.slice(0,10)},
+      axisLine:{lineStyle:{color:"#30363d"}},splitLine:{show:false}},
+    yAxis:{type:"value",...axisStyle,min:0},
+    series:[
+      {name:"ADX",type:"line",data:inds.map(d=>d.adx),smooth:true,symbol:"none",lineStyle:{color:"#ffa657",width:2}},
+    ]
+  });
+}
+
+// ── EDA Page ─────────────────────────────────────────────────────────────────
+async function loadEda(){
+  const allPrices = await Promise.all(TICKERS.map(t=>fetchJSON(`${API}/prices?ticker=${t}&period=ALL`)));
+
+  // Return distribution (histogram)
+  const distChart = mkChart("chartRetDist");
+  const series = allPrices.map((prices,i)=>{
+    if(!prices||prices.length<2) return null;
+    const rets = prices.slice(1).map((d,j)=>((d.close-prices[j].close)/prices[j].close*100).toFixed(3)*1);
+    // bucket into bins
+    const min=-6, max=6, bins=60;
+    const step=(max-min)/bins;
+    const counts=new Array(bins).fill(0);
+    rets.forEach(r=>{ const idx=Math.min(bins-1,Math.max(0,Math.floor((r-min)/step))); counts[idx]++; });
+    return {name:NAMES[TICKERS[i]],type:"line",smooth:true,symbol:"none",
+      lineStyle:{color:COLORS[i],width:1.8},
+      data:counts.map((c,k)=>[+(min+k*step+step/2).toFixed(2), c])};
+  }).filter(Boolean);
+  distChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    legend:{textStyle:{color:"#8b949e"},bottom:0},
+    xAxis:{type:"value",...axisStyle,name:"Daily Return (%)"},
+    yAxis:{type:"value",...axisStyle,name:"Count"},
+    grid:{top:10,right:20,bottom:50,left:55},
+    series
+  });
+
+  // Cumulative return
+  const cumChart = mkChart("chartCumRet");
+  const cumSeries = allPrices.map((prices,i)=>{
+    if(!prices||!prices.length) return null;
+    const base = prices[0].close;
+    return {name:NAMES[TICKERS[i]],type:"line",smooth:true,symbol:"none",
+      lineStyle:{color:COLORS[i],width:2},
+      data:prices.map(d=>[d.date, +((d.close/base-1)*100).toFixed(2)])};
+  }).filter(Boolean);
+  cumChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    legend:{textStyle:{color:"#8b949e"},bottom:0},
+    xAxis:{type:"time",...axisStyle},
+    yAxis:{type:"value",...axisStyle,name:"Return (%)"},
+    grid:{top:10,right:20,bottom:50,left:65},
+    series:cumSeries
+  });
+
+  // Summary table – derive from actual data
+  const rows = allPrices.map((prices,i)=>{
+    if(!prices||prices.length<2) return null;
+    const t = TICKERS[i];
+    const rets = prices.slice(1).map((d,j)=>(d.close-prices[j].close)/prices[j].close);
+    const annRet = ((1+rets.reduce((a,b)=>a+b,0)/rets.length)**252-1)*100;
+    const annVol = Math.sqrt(rets.reduce((a,b)=>a+b*b,0)/rets.length)*Math.sqrt(252)*100;
+    const sharpe = (annRet-6)/annVol;
+    let peak=prices[0].close, maxdd=0;
+    prices.forEach(d=>{ peak=Math.max(peak,d.close); maxdd=Math.min(maxdd,(d.close-peak)/peak); });
+    const total = (prices[prices.length-1].close/prices[0].close-1)*100;
+    return {Ticker:t,Name:NAMES[t],Days:prices.length,
+      "Start ₹":prices[0].close.toFixed(2),"End ₹":prices[prices.length-1].close.toFixed(2),
+      "Total Ret%":total.toFixed(2),"Ann Ret%":annRet.toFixed(2),
+      "Ann Vol%":annVol.toFixed(2),"Sharpe":sharpe.toFixed(3),"MaxDD%":(maxdd*100).toFixed(2)};
+  }).filter(Boolean);
+
+  const edaDiv = document.getElementById("edaTable");
+  if(rows.length){
+    const cols = Object.keys(rows[0]);
+    edaDiv.innerHTML=`<table><thead><tr>${cols.map(c=>`<th>${c}</th>`).join("")}</tr></thead>
+      <tbody>${rows.map(r=>`<tr>${cols.map(c=>{
+        const v=r[c]; const num=parseFloat(v);
+        let cls="";
+        if(c.includes("Ret%")||c.includes("Sharpe")){cls=num>=0?"up":"down";}
+        if(c==="MaxDD%"){cls=num<=-20?"down":num<0?"neutral":"up";}
+        return `<td class="${cls}">${v}</td>`;
+      }).join("")}</tr>`).join("")}</tbody></table>`;
+  }
+}
+
+// ── ML Models Page ───────────────────────────────────────────────────────────
+async function loadML(){
+  const [metrics, preds] = await Promise.all([
+    fetchJSON(`${API}/model_metrics`),
+    fetchJSON(`${API}/predictions?ticker=${activeTicker}`)
+  ]);
+
+  // Table
+  const mlDiv = document.getElementById("mlTable");
+  if(metrics&&metrics.length){
+    const cols = ["ticker","model","accuracy","precision","recall","f1","roc_auc"];
+    mlDiv.innerHTML=`<table><thead><tr>${cols.map(c=>`<th>${c.replace("_"," ").toUpperCase()}</th>`).join("")}</tr></thead>
+      <tbody>${metrics.map(r=>`<tr>${cols.map(c=>{
+        const v=r[c];
+        if(typeof v==="number") return `<td>${v.toFixed(3)}</td>`;
+        return `<td><span class="badge badge-blue">${v}</span></td>`;
+      }).join("")}</tr>`).join("")}</tbody></table>`;
+  }
+
+  // AUC bar chart
+  if(metrics&&metrics.length){
+    const modelNames = [...new Set(metrics.map(m=>m.model))];
+    const tickerNames = [...new Set(metrics.map(m=>m.ticker))];
+    const aucChart = mkChart("chartAuc");
+    aucChart.setOption({
+      tooltip:{...tooltipStyle,trigger:"axis"},
+      legend:{textStyle:{color:"#8b949e"},bottom:0},
+      xAxis:{type:"category",data:tickerNames.map(t=>NAMES[t]||t),axisLabel:{color:"#8b949e"},axisLine:{lineStyle:{color:"#30363d"}}},
+      yAxis:{type:"value",...axisStyle,min:0.4,max:1},
+      grid:{top:10,right:20,bottom:50,left:55},
+      series:modelNames.map((mn,i)=>({
+        name:mn,type:"bar",barGap:"10%",
+        data:tickerNames.map(t=>{
+          const row=metrics.find(m=>m.ticker===t&&m.model===mn);
+          return row?+row.roc_auc.toFixed(3):0;
+        }),
+        itemStyle:{color:COLORS[i]}
+      }))
+    });
+
+    const accChart = mkChart("chartAcc");
+    accChart.setOption({
+      tooltip:{...tooltipStyle,trigger:"axis"},
+      legend:{textStyle:{color:"#8b949e"},bottom:0},
+      xAxis:{type:"category",data:tickerNames.map(t=>NAMES[t]||t),axisLabel:{color:"#8b949e"},axisLine:{lineStyle:{color:"#30363d"}}},
+      yAxis:{type:"value",...axisStyle,min:0.4,max:0.75},
+      grid:{top:10,right:20,bottom:50,left:55},
+      series:modelNames.map((mn,i)=>({
+        name:mn,type:"bar",barGap:"10%",
+        data:tickerNames.map(t=>{
+          const row=metrics.find(m=>m.ticker===t&&m.model===mn);
+          return row?+row.accuracy.toFixed(3):0;
+        }),
+        itemStyle:{color:COLORS[i]}
+      }))
+    });
+  }
+
+  // Prediction accuracy over time
+  if(preds&&preds.length){
+    const predAccChart = mkChart("chartPredAcc");
+    const window=30;
+    const rolling = preds.map((d,i)=>{
+      if(i<window) return null;
+      const slice=preds.slice(i-window,i);
+      const acc=slice.filter(x=>x.correct===1).length/window*100;
+      return [d.date, +acc.toFixed(1)];
+    }).filter(Boolean);
+    predAccChart.setOption({
+      tooltip:{...tooltipStyle,trigger:"axis"},
+      xAxis:{type:"time",...axisStyle},
+      yAxis:{type:"value",...axisStyle,min:30,max:80,name:"Rolling Acc%"},
+      grid:{top:10,right:20,bottom:30,left:60},
+      series:[{type:"line",data:rolling,smooth:true,symbol:"none",
+        name:"30d Rolling Acc%",lineStyle:{color:"#58a6ff",width:2},
+        areaStyle:{color:"rgba(88,166,255,.1)"}}]
+    });
+  }
+}
+
+// ── Backtest Page ─────────────────────────────────────────────────────────────
+async function loadBacktest(){
+  const bt = await fetchJSON(`${API}/backtest`);
+  if(!bt||!bt.length) return;
+
+  // Table
+  const cols = ["ticker","strat_total_return_%","bnh_total_return_%",
+    "strat_cagr_%","strat_sharpe","strat_maxdd_%","win_rate_%","n_long_days"];
+  const labels = {ticker:"Ticker","strat_total_return_%":"Strat Ret%",
+    "bnh_total_return_%":"B&H Ret%","strat_cagr_%":"CAGR%",
+    "strat_sharpe":"Sharpe","strat_maxdd_%":"MaxDD%",
+    "win_rate_%":"Win Rate%","n_long_days":"Long Days"};
+  const btDiv = document.getElementById("btTable");
+  btDiv.innerHTML=`<table><thead><tr>${cols.map(c=>`<th>${labels[c]||c}</th>`).join("")}</tr></thead>
+    <tbody>${bt.map(r=>`<tr>${cols.map(c=>{
+      const v=r[c];
+      if(c==="ticker") return `<td><strong>${NAMES[v]||v}</strong></td>`;
+      const num=parseFloat(v);
+      if(c.includes("ret")||c.includes("cagr")||c.includes("sharpe")){
+        return `<td class="${num>=0?"up":"down"}">${num>=0?"+":""}${typeof num==="number"?num.toFixed(2):v}</td>`;
+      }
+      if(c.includes("maxdd")) return `<td class="${num<=-20?"down":"neutral"}">${typeof num==="number"?num.toFixed(2):v}%</td>`;
+      return `<td>${typeof num==="number"&&!isNaN(num)?num.toFixed(2):v}</td>`;
+    }).join("")}</tr>`).join("")}</tbody></table>`;
+
+  const tickers = bt.map(r=>NAMES[r.ticker]||r.ticker);
+
+  // Return comparison
+  const retChart = mkChart("chartBtReturn");
+  retChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    legend:{textStyle:{color:"#8b949e"},bottom:0},
+    xAxis:{type:"category",data:tickers,axisLabel:{color:"#8b949e"},axisLine:{lineStyle:{color:"#30363d"}}},
+    yAxis:{type:"value",...axisStyle,name:"Return (%)"},
+    grid:{top:10,right:20,bottom:50,left:60},
+    series:[
+      {name:"ML Strategy",type:"bar",data:bt.map(r=>parseFloat(r["strat_total_return_%"])||0),
+        itemStyle:{color:"#58a6ff"}},
+      {name:"Buy & Hold",type:"bar",data:bt.map(r=>parseFloat(r["bnh_total_return_%"])||0),
+        itemStyle:{color:"#8b949e"}},
+    ]
+  });
+
+  // Sharpe
+  const sharpeChart = mkChart("chartBtSharpe");
+  sharpeChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    xAxis:{type:"category",data:tickers,axisLabel:{color:"#8b949e"},axisLine:{lineStyle:{color:"#30363d"}}},
+    yAxis:{type:"value",...axisStyle},
+    grid:{top:10,right:20,bottom:40,left:55},
+    series:[{type:"bar",data:bt.map(r=>parseFloat(r["strat_sharpe"])||0),
+      itemStyle:{color:p=>parseFloat(bt[p.dataIndex]["strat_sharpe"])>=1?"#3fb950":"#ffa657"}}]
+  });
+
+  // Drawdown
+  const ddChart = mkChart("chartBtDD");
+  ddChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    xAxis:{type:"category",data:tickers,axisLabel:{color:"#8b949e"},axisLine:{lineStyle:{color:"#30363d"}}},
+    yAxis:{type:"value",...axisStyle,name:"MaxDD%"},
+    grid:{top:10,right:20,bottom:40,left:60},
+    series:[
+      {name:"ML Strategy",type:"bar",data:bt.map(r=>parseFloat(r["strat_maxdd_%"])||0),itemStyle:{color:"#f85149"}},
+      {name:"Buy & Hold",type:"bar",data:bt.map(r=>parseFloat(r["bnh_maxdd_%"])||0),itemStyle:{color:"#8b949e"}},
+    ]
+  });
+
+  // Win rate
+  const wrChart = mkChart("chartWinRate");
+  wrChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    xAxis:{type:"category",data:tickers,axisLabel:{color:"#8b949e"},axisLine:{lineStyle:{color:"#30363d"}}},
+    yAxis:{type:"value",...axisStyle,min:40,max:60,name:"Win Rate%"},
+    grid:{top:10,right:20,bottom:40,left:55},
+    series:[{type:"bar",data:bt.map(r=>parseFloat(r["win_rate_%"])||0),
+      itemStyle:{color:p=>parseFloat(bt[p.dataIndex]["win_rate_%"])>=50?"#3fb950":"#f85149"}}]
+  });
+}
+
+// ── Predict Page ──────────────────────────────────────────────────────────────
+async function loadPredict(){
+  const ticker = document.getElementById("predictSelect").value || activeTicker;
+  const preds = await fetchJSON(`${API}/predictions?ticker=${ticker}`);
+  if(!preds||!preds.length) return;
+
+  // Prediction history
+  const histChart = mkChart("chartPredHist");
+  histChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    legend:{textStyle:{color:"#8b949e"},bottom:0},
+    dataZoom:[{type:"inside",start:60,end:100}],
+    xAxis:{type:"category",data:preds.map(d=>d.date),axisLabel:{color:"#8b949e",formatter:v=>v.slice(0,10)},
+      axisLine:{lineStyle:{color:"#30363d"}},splitLine:{show:false}},
+    yAxis:{type:"value",...axisStyle,scale:true,name:"Close ₹"},
+    grid:{top:10,right:20,bottom:50,left:70},
+    series:[
+      {name:"Close",type:"line",data:preds.map(d=>d.close),smooth:true,symbol:"none",
+        lineStyle:{color:"#ffa657",width:1.5}},
+      {name:"Buy Signal",type:"scatter",
+        data:preds.filter(d=>d.predicted_up===1).map(d=>[d.date,d.close]),
+        symbolSize:6,itemStyle:{color:"#3fb950"}},
+      {name:"Sell Signal",type:"scatter",
+        data:preds.filter(d=>d.predicted_up===0).map(d=>[d.date,d.close]),
+        symbolSize:6,itemStyle:{color:"#f85149"}},
+    ]
+  });
+
+  // Rolling accuracy
+  const accChart = mkChart("chartSigAcc");
+  const window=20;
+  const rolling = preds.map((d,i)=>{
+    if(i<window) return null;
+    const slice=preds.slice(i-window,i);
+    const acc=slice.filter(x=>x.correct===1).length/window*100;
+    return [d.date, +acc.toFixed(1)];
+  }).filter(Boolean);
+  accChart.setOption({
+    tooltip:{...tooltipStyle,trigger:"axis"},
+    xAxis:{type:"time",...axisStyle},
+    yAxis:{type:"value",...axisStyle,min:30,max:80,name:"20d Rolling Acc%"},
+    grid:{top:10,right:20,bottom:30,left:60},
+    series:[{type:"line",data:rolling,smooth:true,symbol:"none",
+      lineStyle:{color:"#bc8cff",width:2},areaStyle:{color:"rgba(188,140,255,.1)"}}]
+  });
+}
+
+// ── Live predict button ───────────────────────────────────────────────────────
+document.getElementById("predictBtn").addEventListener("click", async()=>{
+  const ticker = document.getElementById("predictSelect").value;
+  const btn = document.getElementById("predictBtn");
+  btn.textContent="⏳ Fetching…"; btn.disabled=true;
+  const res = await fetchJSON(`${API}/predict`).catch(()=>null) ||
+    await fetch(`${API}/predict`,{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({ticker})}).then(r=>r.json()).catch(()=>null);
+  btn.textContent="🔮 Get Signal"; btn.disabled=false;
+  const div = document.getElementById("predictResult");
+  if(!res||res.error){
+    div.innerHTML=`<div class="error-msg">⚠ Could not fetch signal. Ensure backend is running.</div>`;
+    return;
+  }
+  const isUp = res.signal==="BUY";
+  div.innerHTML=`
+    <div class="signal-display ${isUp?"signal-buy":"signal-hold"}">${res.signal}</div>
+    <div style="font-size:13px;color:var(--muted)">Probability of UP move</div>
+    <div class="prob-bar"><div class="prob-fill" style="width:${(res.prob_up*100).toFixed(0)}%;background:${isUp?"var(--green)":"var(--red)"}"></div></div>
+    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted)">
+      <span>0%</span><span>${(res.prob_up*100).toFixed(1)}%</span><span>100%</span>
+    </div>
+    <div style="margin-top:12px;font-size:13px">
+      <div>📅 Date: <strong>${res.date}</strong></div>
+      <div>💰 Close: <strong>₹${res.close}</strong></div>
+      <div>🎯 Confidence: <strong>${res.confidence}%</strong></div>
+    </div>`;
+});
+
+document.getElementById("predictSelect").addEventListener("change",()=>loadPredict());
+
+// ── Page loader ───────────────────────────────────────────────────────────────
+async function loadPage(page){
+  switch(page){
+    case "overview":   await loadOverview(); break;
+    case "charts":     await loadCharts();   break;
+    case "indicators": await loadIndicators();break;
+    case "eda":        await loadEda();       break;
+    case "ml":         await loadML();        break;
+    case "backtest":   await loadBacktest();  break;
+    case "predict":    await loadPredict();   break;
+  }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+async function init(){
+  // Update topbar time
+  const meta = document.getElementById("topbarMeta");
+  meta.textContent = new Date().toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short"});
+
+  await buildTickerList();
+  await loadOverview();
+  // Pre-warm ticker sidebar every 60s
+  setInterval(buildTickerList, 60000);
+}
+
+window.addEventListener("resize",()=>{
+  Object.values(charts).forEach(c=>{ try{c.resize();}catch(e){} });
+});
+
+init();
+</script>
+</body>
+</html>

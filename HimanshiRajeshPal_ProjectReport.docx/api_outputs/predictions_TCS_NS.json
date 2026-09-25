@@ -1,0 +1,2450 @@
+[
+  {
+    "actual_target": 0,
+    "close": 3216.2990722656,
+    "correct": 1,
+    "date": "2023-09-29 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2633999884
+  },
+  {
+    "actual_target": 1,
+    "close": 3202.8549804688,
+    "correct": 1,
+    "date": "2023-10-03 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8077999949
+  },
+  {
+    "actual_target": 1,
+    "close": 3224.6398925781,
+    "correct": 1,
+    "date": "2023-10-04 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8501999974
+  },
+  {
+    "actual_target": 1,
+    "close": 3271.6728515625,
+    "correct": 1,
+    "date": "2023-10-05 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8345999718
+  },
+  {
+    "actual_target": 1,
+    "close": 3300.8854980469,
+    "correct": 1,
+    "date": "2023-10-06 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7703999877
+  },
+  {
+    "actual_target": 0,
+    "close": 3316.3359375,
+    "correct": 1,
+    "date": "2023-10-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2074999958
+  },
+  {
+    "actual_target": 0,
+    "close": 3307.7221679688,
+    "correct": 1,
+    "date": "2023-10-10 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1534000039
+  },
+  {
+    "actual_target": 0,
+    "close": 3290.4038085938,
+    "correct": 1,
+    "date": "2023-10-11 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1460999995
+  },
+  {
+    "actual_target": 1,
+    "close": 3229.0144042969,
+    "correct": 1,
+    "date": "2023-10-12 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7221000195
+  },
+  {
+    "actual_target": 0,
+    "close": 3254.8100585938,
+    "correct": 1,
+    "date": "2023-10-13 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1957000047
+  },
+  {
+    "actual_target": 0,
+    "close": 3212.1516113281,
+    "correct": 1,
+    "date": "2023-10-16 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1246000007
+  },
+  {
+    "actual_target": 0,
+    "close": 3196.6567382812,
+    "correct": 1,
+    "date": "2023-10-17 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1395999938
+  },
+  {
+    "actual_target": 0,
+    "close": 3178.6088867188,
+    "correct": 1,
+    "date": "2023-10-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1606000066
+  },
+  {
+    "actual_target": 1,
+    "close": 3157.9558105469,
+    "correct": 1,
+    "date": "2023-10-19 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.834800005
+  },
+  {
+    "actual_target": 0,
+    "close": 3193.5048828125,
+    "correct": 1,
+    "date": "2023-10-20 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1363999993
+  },
+  {
+    "actual_target": 0,
+    "close": 3116.3754882812,
+    "correct": 1,
+    "date": "2023-10-23 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.150000006
+  },
+  {
+    "actual_target": 0,
+    "close": 3098.0532226562,
+    "correct": 1,
+    "date": "2023-10-25 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2012999952
+  },
+  {
+    "actual_target": 1,
+    "close": 3049.298828125,
+    "correct": 1,
+    "date": "2023-10-26 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9268000126
+  },
+  {
+    "actual_target": 1,
+    "close": 3062.275390625,
+    "correct": 1,
+    "date": "2023-10-27 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8988999724
+  },
+  {
+    "actual_target": 0,
+    "close": 3087.4978027344,
+    "correct": 1,
+    "date": "2023-10-30 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1209999993
+  },
+  {
+    "actual_target": 0,
+    "close": 3078.5422363281,
+    "correct": 1,
+    "date": "2023-10-31 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2228000015
+  },
+  {
+    "actual_target": 1,
+    "close": 3043.7243652344,
+    "correct": 1,
+    "date": "2023-11-01 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7750999928
+  },
+  {
+    "actual_target": 0,
+    "close": 3070.6369628906,
+    "correct": 1,
+    "date": "2023-11-02 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1931000054
+  },
+  {
+    "actual_target": 1,
+    "close": 3062.2297363281,
+    "correct": 1,
+    "date": "2023-11-03 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8481000066
+  },
+  {
+    "actual_target": 0,
+    "close": 3089.0515136719,
+    "correct": 1,
+    "date": "2023-11-06 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.183799997
+  },
+  {
+    "actual_target": 1,
+    "close": 3080.0954589844,
+    "correct": 1,
+    "date": "2023-11-07 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7096999884
+  },
+  {
+    "actual_target": 0,
+    "close": 3090.2397460938,
+    "correct": 1,
+    "date": "2023-11-08 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1841000021
+  },
+  {
+    "actual_target": 0,
+    "close": 3059.0769042969,
+    "correct": 1,
+    "date": "2023-11-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2433999926
+  },
+  {
+    "actual_target": 0,
+    "close": 3046.2829589844,
+    "correct": 1,
+    "date": "2023-11-10 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1764999926
+  },
+  {
+    "actual_target": 1,
+    "close": 3044.5471191406,
+    "correct": 1,
+    "date": "2023-11-13 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7752000093
+  },
+  {
+    "actual_target": 1,
+    "close": 3111.0297851562,
+    "correct": 1,
+    "date": "2023-11-15 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9096999764
+  },
+  {
+    "actual_target": 1,
+    "close": 3196.5205078125,
+    "correct": 1,
+    "date": "2023-11-16 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9556999803
+  },
+  {
+    "actual_target": 1,
+    "close": 3200.7243652344,
+    "correct": 1,
+    "date": "2023-11-17 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8417999744
+  },
+  {
+    "actual_target": 0,
+    "close": 3216.3967285156,
+    "correct": 1,
+    "date": "2023-11-20 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1608999968
+  },
+  {
+    "actual_target": 1,
+    "close": 3207.806640625,
+    "correct": 1,
+    "date": "2023-11-21 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7110999823
+  },
+  {
+    "actual_target": 0,
+    "close": 3226.0380859375,
+    "correct": 1,
+    "date": "2023-11-22 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1106999964
+  },
+  {
+    "actual_target": 0,
+    "close": 3206.0249023438,
+    "correct": 1,
+    "date": "2023-11-23 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2096000016
+  },
+  {
+    "actual_target": 1,
+    "close": 3159.2810058594,
+    "correct": 1,
+    "date": "2023-11-24 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8485000134
+  },
+  {
+    "actual_target": 1,
+    "close": 3171.2067871094,
+    "correct": 1,
+    "date": "2023-11-28 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9007999897
+  },
+  {
+    "actual_target": 0,
+    "close": 3211.05078125,
+    "correct": 1,
+    "date": "2023-11-29 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2115000039
+  },
+  {
+    "actual_target": 1,
+    "close": 3187.1538085938,
+    "correct": 1,
+    "date": "2023-11-30 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9107999802
+  },
+  {
+    "actual_target": 1,
+    "close": 3209.1315917969,
+    "correct": 1,
+    "date": "2023-12-01 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8939999938
+  },
+  {
+    "actual_target": 1,
+    "close": 3209.8627929688,
+    "correct": 1,
+    "date": "2023-12-04 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.844900012
+  },
+  {
+    "actual_target": 1,
+    "close": 3227.3630371094,
+    "correct": 1,
+    "date": "2023-12-05 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8669000268
+  },
+  {
+    "actual_target": 1,
+    "close": 3293.6176757812,
+    "correct": 1,
+    "date": "2023-12-06 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8357999921
+  },
+  {
+    "actual_target": 1,
+    "close": 3303.4868164062,
+    "correct": 1,
+    "date": "2023-12-07 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8112000227
+  },
+  {
+    "actual_target": 1,
+    "close": 3314.2705078125,
+    "correct": 1,
+    "date": "2023-12-08 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8730999827
+  },
+  {
+    "actual_target": 1,
+    "close": 3329.0744628906,
+    "correct": 1,
+    "date": "2023-12-11 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.815599978
+  },
+  {
+    "actual_target": 0,
+    "close": 3355.7595214844,
+    "correct": 1,
+    "date": "2023-12-12 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2256000042
+  },
+  {
+    "actual_target": 1,
+    "close": 3283.9763183594,
+    "correct": 1,
+    "date": "2023-12-13 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8737000227
+  },
+  {
+    "actual_target": 1,
+    "close": 3351.3273925781,
+    "correct": 1,
+    "date": "2023-12-14 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9021999836
+  },
+  {
+    "actual_target": 0,
+    "close": 3528.3864746094,
+    "correct": 1,
+    "date": "2023-12-15 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0529000014
+  },
+  {
+    "actual_target": 0,
+    "close": 3526.7414550781,
+    "correct": 1,
+    "date": "2023-12-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0856999978
+  },
+  {
+    "actual_target": 0,
+    "close": 3487.4458007812,
+    "correct": 1,
+    "date": "2023-12-19 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1921000034
+  },
+  {
+    "actual_target": 1,
+    "close": 3454.4094238281,
+    "correct": 1,
+    "date": "2023-12-20 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.893599987
+  },
+  {
+    "actual_target": 1,
+    "close": 3461.2177734375,
+    "correct": 1,
+    "date": "2023-12-21 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8223999739
+  },
+  {
+    "actual_target": 0,
+    "close": 3494.5734863281,
+    "correct": 1,
+    "date": "2023-12-22 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1644999981
+  },
+  {
+    "actual_target": 1,
+    "close": 3468.5744628906,
+    "correct": 1,
+    "date": "2023-12-26 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.6661000252
+  },
+  {
+    "actual_target": 0,
+    "close": 3482.8762207031,
+    "correct": 1,
+    "date": "2023-12-27 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1818999946
+  },
+  {
+    "actual_target": 0,
+    "close": 3472.5495605469,
+    "correct": 1,
+    "date": "2023-12-28 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1374000013
+  },
+  {
+    "actual_target": 1,
+    "close": 3466.609375,
+    "correct": 1,
+    "date": "2023-12-29 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.6370000243
+  },
+  {
+    "actual_target": 0,
+    "close": 3482.78515625,
+    "correct": 1,
+    "date": "2024-01-01 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1845999956
+  },
+  {
+    "actual_target": 0,
+    "close": 3457.2883300781,
+    "correct": 1,
+    "date": "2024-01-02 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0756999999
+  },
+  {
+    "actual_target": 0,
+    "close": 3373.7165527344,
+    "correct": 1,
+    "date": "2024-01-03 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2452999949
+  },
+  {
+    "actual_target": 1,
+    "close": 3350.916015625,
+    "correct": 1,
+    "date": "2024-01-04 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8030999899
+  },
+  {
+    "actual_target": 0,
+    "close": 3415.8911132812,
+    "correct": 1,
+    "date": "2024-01-05 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2554999888
+  },
+  {
+    "actual_target": 1,
+    "close": 3361.4255371094,
+    "correct": 1,
+    "date": "2024-01-08 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8149999976
+  },
+  {
+    "actual_target": 1,
+    "close": 3372.0261230469,
+    "correct": 1,
+    "date": "2024-01-09 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8669000268
+  },
+  {
+    "actual_target": 1,
+    "close": 3393.181640625,
+    "correct": 1,
+    "date": "2024-01-10 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8143000007
+  },
+  {
+    "actual_target": 1,
+    "close": 3413.7431640625,
+    "correct": 1,
+    "date": "2024-01-11 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8216999769
+  },
+  {
+    "actual_target": 1,
+    "close": 3548.3081054688,
+    "correct": 1,
+    "date": "2024-01-12 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8991000056
+  },
+  {
+    "actual_target": 0,
+    "close": 3567.4992675781,
+    "correct": 1,
+    "date": "2024-01-15 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2741000056
+  },
+  {
+    "actual_target": 1,
+    "close": 3528.66015625,
+    "correct": 1,
+    "date": "2024-01-16 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9092000127
+  },
+  {
+    "actual_target": 1,
+    "close": 3549.9533691406,
+    "correct": 1,
+    "date": "2024-01-17 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8953999877
+  },
+  {
+    "actual_target": 1,
+    "close": 3566.4025878906,
+    "correct": 1,
+    "date": "2024-01-18 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7709000111
+  },
+  {
+    "actual_target": 0,
+    "close": 3628.4714355469,
+    "correct": 1,
+    "date": "2024-01-19 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1476999968
+  },
+  {
+    "actual_target": 0,
+    "close": 3550.4365234375,
+    "correct": 1,
+    "date": "2024-01-23 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1761000007
+  },
+  {
+    "actual_target": 0,
+    "close": 3535.2993164062,
+    "correct": 1,
+    "date": "2024-01-24 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.3206999898
+  },
+  {
+    "actual_target": 0,
+    "close": 3506.3122558594,
+    "correct": 1,
+    "date": "2024-01-25 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1462000012
+  },
+  {
+    "actual_target": 0,
+    "close": 3497.7543945312,
+    "correct": 1,
+    "date": "2024-01-29 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1687999964
+  },
+  {
+    "actual_target": 1,
+    "close": 3497.33984375,
+    "correct": 1,
+    "date": "2024-01-30 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8008999825
+  },
+  {
+    "actual_target": 1,
+    "close": 3511.51171875,
+    "correct": 1,
+    "date": "2024-01-31 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8324000239
+  },
+  {
+    "actual_target": 1,
+    "close": 3546.6638183594,
+    "correct": 1,
+    "date": "2024-02-01 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7296000123
+  },
+  {
+    "actual_target": 1,
+    "close": 3649.8666992188,
+    "correct": 1,
+    "date": "2024-02-02 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8905000091
+  },
+  {
+    "actual_target": 1,
+    "close": 3656.3078613281,
+    "correct": 1,
+    "date": "2024-02-05 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8428000212
+  },
+  {
+    "actual_target": 0,
+    "close": 3806.0280761719,
+    "correct": 1,
+    "date": "2024-02-06 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.114699997
+  },
+  {
+    "actual_target": 1,
+    "close": 3757.6240234375,
+    "correct": 1,
+    "date": "2024-02-07 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.774699986
+  },
+  {
+    "actual_target": 0,
+    "close": 3804.2790527344,
+    "correct": 1,
+    "date": "2024-02-08 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1394000053
+  },
+  {
+    "actual_target": 0,
+    "close": 3803.9111328125,
+    "correct": 1,
+    "date": "2024-02-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1045000032
+  },
+  {
+    "actual_target": 1,
+    "close": 3791.9484863281,
+    "correct": 1,
+    "date": "2024-02-12 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7566999793
+  },
+  {
+    "actual_target": 0,
+    "close": 3818.4506835938,
+    "correct": 1,
+    "date": "2024-02-13 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1500999928
+  },
+  {
+    "actual_target": 1,
+    "close": 3772.9919433594,
+    "correct": 1,
+    "date": "2024-02-14 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8174999952
+  },
+  {
+    "actual_target": 1,
+    "close": 3775.8447265625,
+    "correct": 1,
+    "date": "2024-02-15 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8610000014
+  },
+  {
+    "actual_target": 0,
+    "close": 3798.9416503906,
+    "correct": 1,
+    "date": "2024-02-16 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1900999993
+  },
+  {
+    "actual_target": 0,
+    "close": 3776.3967285156,
+    "correct": 1,
+    "date": "2024-02-19 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1079000011
+  },
+  {
+    "actual_target": 0,
+    "close": 3709.0825195312,
+    "correct": 1,
+    "date": "2024-02-20 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1030000001
+  },
+  {
+    "actual_target": 1,
+    "close": 3673.0559082031,
+    "correct": 1,
+    "date": "2024-02-21 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7522000074
+  },
+  {
+    "actual_target": 0,
+    "close": 3761.0290527344,
+    "correct": 1,
+    "date": "2024-02-22 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.184799999
+  },
+  {
+    "actual_target": 0,
+    "close": 3728.8217773438,
+    "correct": 1,
+    "date": "2024-02-23 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1203000024
+  },
+  {
+    "actual_target": 1,
+    "close": 3681.8439941406,
+    "correct": 1,
+    "date": "2024-02-26 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8084999919
+  },
+  {
+    "actual_target": 1,
+    "close": 3776.9489746094,
+    "correct": 1,
+    "date": "2024-02-27 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7455000281
+  },
+  {
+    "actual_target": 0,
+    "close": 3790.3381347656,
+    "correct": 1,
+    "date": "2024-02-28 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1440999955
+  },
+  {
+    "actual_target": 0,
+    "close": 3768.3908691406,
+    "correct": 1,
+    "date": "2024-02-29 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1738000065
+  },
+  {
+    "actual_target": 0,
+    "close": 3767.7004394531,
+    "correct": 1,
+    "date": "2024-03-01 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1048000008
+  },
+  {
+    "actual_target": 0,
+    "close": 3755.1398925781,
+    "correct": 1,
+    "date": "2024-03-04 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.174999997
+  },
+  {
+    "actual_target": 1,
+    "close": 3692.0124511719,
+    "correct": 1,
+    "date": "2024-03-05 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8231999874
+  },
+  {
+    "actual_target": 1,
+    "close": 3740.0478515625,
+    "correct": 1,
+    "date": "2024-03-06 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8837000132
+  },
+  {
+    "actual_target": 1,
+    "close": 3780.8139648438,
+    "correct": 1,
+    "date": "2024-03-07 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8506000042
+  },
+  {
+    "actual_target": 1,
+    "close": 3793.4670410156,
+    "correct": 1,
+    "date": "2024-03-11 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7404999733
+  },
+  {
+    "actual_target": 0,
+    "close": 3857.7902832031,
+    "correct": 1,
+    "date": "2024-03-12 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1585000008
+  },
+  {
+    "actual_target": 1,
+    "close": 3817.990234375,
+    "correct": 1,
+    "date": "2024-03-13 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7440999746
+  },
+  {
+    "actual_target": 1,
+    "close": 3871.916015625,
+    "correct": 1,
+    "date": "2024-03-14 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8956999779
+  },
+  {
+    "actual_target": 0,
+    "close": 3882.6362304688,
+    "correct": 1,
+    "date": "2024-03-15 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2066999972
+  },
+  {
+    "actual_target": 0,
+    "close": 3821.2109375,
+    "correct": 1,
+    "date": "2024-03-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.3366999924
+  },
+  {
+    "actual_target": 0,
+    "close": 3659.9887695312,
+    "correct": 1,
+    "date": "2024-03-19 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.205400005
+  },
+  {
+    "actual_target": 1,
+    "close": 3654.0993652344,
+    "correct": 1,
+    "date": "2024-03-20 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8163999915
+  },
+  {
+    "actual_target": 0,
+    "close": 3655.9855957031,
+    "correct": 1,
+    "date": "2024-03-21 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1309999973
+  },
+  {
+    "actual_target": 0,
+    "close": 3598.8862304688,
+    "correct": 1,
+    "date": "2024-03-22 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1286000013
+  },
+  {
+    "actual_target": 0,
+    "close": 3568.1508789062,
+    "correct": 1,
+    "date": "2024-03-26 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2181999981
+  },
+  {
+    "actual_target": 1,
+    "close": 3534.470703125,
+    "correct": 1,
+    "date": "2024-03-27 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8550000191
+  },
+  {
+    "actual_target": 1,
+    "close": 3567.046875,
+    "correct": 1,
+    "date": "2024-03-28 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.800999999
+  },
+  {
+    "actual_target": 0,
+    "close": 3604.2697753906,
+    "correct": 1,
+    "date": "2024-04-01 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2711000144
+  },
+  {
+    "actual_target": 1,
+    "close": 3573.9484863281,
+    "correct": 1,
+    "date": "2024-04-02 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7926999927
+  },
+  {
+    "actual_target": 1,
+    "close": 3632.3825683594,
+    "correct": 1,
+    "date": "2024-04-03 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7904000282
+  },
+  {
+    "actual_target": 0,
+    "close": 3683.9143066406,
+    "correct": 1,
+    "date": "2024-04-04 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0979999974
+  },
+  {
+    "actual_target": 0,
+    "close": 3661.783203125,
+    "correct": 1,
+    "date": "2024-04-05 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0737000033
+  },
+  {
+    "actual_target": 0,
+    "close": 3655.6176757812,
+    "correct": 1,
+    "date": "2024-04-08 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2116000056
+  },
+  {
+    "actual_target": 1,
+    "close": 3631.6923828125,
+    "correct": 1,
+    "date": "2024-04-09 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7915999889
+  },
+  {
+    "actual_target": 1,
+    "close": 3666.7524414062,
+    "correct": 1,
+    "date": "2024-04-10 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7810000181
+  },
+  {
+    "actual_target": 0,
+    "close": 3682.1657714844,
+    "correct": 1,
+    "date": "2024-04-12 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1666000038
+  },
+  {
+    "actual_target": 0,
+    "close": 3626.7687988281,
+    "correct": 1,
+    "date": "2024-04-15 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1957000047
+  },
+  {
+    "actual_target": 0,
+    "close": 3563.8259277344,
+    "correct": 1,
+    "date": "2024-04-16 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1818999946
+  },
+  {
+    "actual_target": 0,
+    "close": 3553.8879394531,
+    "correct": 1,
+    "date": "2024-04-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1879999936
+  },
+  {
+    "actual_target": 1,
+    "close": 3520.9436035156,
+    "correct": 1,
+    "date": "2024-04-19 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7851999998
+  },
+  {
+    "actual_target": 1,
+    "close": 3556.2805175781,
+    "correct": 1,
+    "date": "2024-04-22 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8080999851
+  },
+  {
+    "actual_target": 0,
+    "close": 3565.5744628906,
+    "correct": 1,
+    "date": "2024-04-23 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2531999946
+  },
+  {
+    "actual_target": 1,
+    "close": 3525.4069824219,
+    "correct": 1,
+    "date": "2024-04-24 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7910000086
+  },
+  {
+    "actual_target": 0,
+    "close": 3544.8698730469,
+    "correct": 1,
+    "date": "2024-04-25 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2080000043
+  },
+  {
+    "actual_target": 1,
+    "close": 3516.4807128906,
+    "correct": 1,
+    "date": "2024-04-26 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8705000281
+  },
+  {
+    "actual_target": 0,
+    "close": 3561.43359375,
+    "correct": 1,
+    "date": "2024-04-29 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0974999964
+  },
+  {
+    "actual_target": 1,
+    "close": 3515.8369140625,
+    "correct": 1,
+    "date": "2024-04-30 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8421999812
+  },
+  {
+    "actual_target": 0,
+    "close": 3555.083984375,
+    "correct": 1,
+    "date": "2024-05-02 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.183799997
+  },
+  {
+    "actual_target": 1,
+    "close": 3536.771484375,
+    "correct": 1,
+    "date": "2024-05-03 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8147000074
+  },
+  {
+    "actual_target": 1,
+    "close": 3608.2268066406,
+    "correct": 1,
+    "date": "2024-05-06 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.80400002
+  },
+  {
+    "actual_target": 0,
+    "close": 3661.5070800781,
+    "correct": 1,
+    "date": "2024-05-07 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0851000026
+  },
+  {
+    "actual_target": 0,
+    "close": 3659.6667480469,
+    "correct": 1,
+    "date": "2024-05-08 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0799999982
+  },
+  {
+    "actual_target": 0,
+    "close": 3644.2531738281,
+    "correct": 1,
+    "date": "2024-05-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1649000049
+  },
+  {
+    "actual_target": 1,
+    "close": 3583.2426757812,
+    "correct": 1,
+    "date": "2024-05-10 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8683000207
+  },
+  {
+    "actual_target": 0,
+    "close": 3632.8422851562,
+    "correct": 1,
+    "date": "2024-05-13 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1805000007
+  },
+  {
+    "actual_target": 0,
+    "close": 3589.9599609375,
+    "correct": 1,
+    "date": "2024-05-14 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0991000012
+  },
+  {
+    "actual_target": 1,
+    "close": 3570.8195800781,
+    "correct": 1,
+    "date": "2024-05-15 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7624999881
+  },
+  {
+    "actual_target": 0,
+    "close": 3615.8205566406,
+    "correct": 1,
+    "date": "2024-05-16 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1498000026
+  },
+  {
+    "actual_target": 0,
+    "close": 3553.8571777344,
+    "correct": 1,
+    "date": "2024-05-17 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1435000002
+  },
+  {
+    "actual_target": 1,
+    "close": 3540.9729003906,
+    "correct": 1,
+    "date": "2024-05-21 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7612000108
+  },
+  {
+    "actual_target": 1,
+    "close": 3551.9106445312,
+    "correct": 1,
+    "date": "2024-05-22 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7803000212
+  },
+  {
+    "actual_target": 0,
+    "close": 3608.8693847656,
+    "correct": 1,
+    "date": "2024-05-23 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1811999977
+  },
+  {
+    "actual_target": 0,
+    "close": 3568.1313476562,
+    "correct": 1,
+    "date": "2024-05-24 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1414999962
+  },
+  {
+    "actual_target": 0,
+    "close": 3565.8610839844,
+    "correct": 1,
+    "date": "2024-05-27 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1872999966
+  },
+  {
+    "actual_target": 0,
+    "close": 3559.2333984375,
+    "correct": 1,
+    "date": "2024-05-28 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0901999995
+  },
+  {
+    "actual_target": 0,
+    "close": 3525.6328125,
+    "correct": 1,
+    "date": "2024-05-29 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2285999954
+  },
+  {
+    "actual_target": 0,
+    "close": 3463.0205078125,
+    "correct": 1,
+    "date": "2024-05-30 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1474000067
+  },
+  {
+    "actual_target": 1,
+    "close": 3402.6318359375,
+    "correct": 1,
+    "date": "2024-05-31 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9187999964
+  },
+  {
+    "actual_target": 1,
+    "close": 3432.2006835938,
+    "correct": 1,
+    "date": "2024-06-03 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9417999983
+  },
+  {
+    "actual_target": 1,
+    "close": 3443.4624023438,
+    "correct": 1,
+    "date": "2024-06-04 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9197000265
+  },
+  {
+    "actual_target": 1,
+    "close": 3472.6137695312,
+    "correct": 1,
+    "date": "2024-06-05 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7893000245
+  },
+  {
+    "actual_target": 1,
+    "close": 3550.4279785156,
+    "correct": 1,
+    "date": "2024-06-06 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7833999991
+  },
+  {
+    "actual_target": 0,
+    "close": 3609.3325195312,
+    "correct": 1,
+    "date": "2024-06-07 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1049999967
+  },
+  {
+    "actual_target": 0,
+    "close": 3576.6589355469,
+    "correct": 1,
+    "date": "2024-06-10 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0904000029
+  },
+  {
+    "actual_target": 0,
+    "close": 3570.5415039062,
+    "correct": 1,
+    "date": "2024-06-11 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1307999939
+  },
+  {
+    "actual_target": 1,
+    "close": 3551.5866699219,
+    "correct": 1,
+    "date": "2024-06-12 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.6894999743
+  },
+  {
+    "actual_target": 0,
+    "close": 3594.6875,
+    "correct": 1,
+    "date": "2024-06-13 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1711000055
+  },
+  {
+    "actual_target": 0,
+    "close": 3551.95703125,
+    "correct": 1,
+    "date": "2024-06-14 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2204000056
+  },
+  {
+    "actual_target": 0,
+    "close": 3536.2458496094,
+    "correct": 1,
+    "date": "2024-06-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.3142000139
+  },
+  {
+    "actual_target": 0,
+    "close": 3523.8254394531,
+    "correct": 1,
+    "date": "2024-06-19 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2781000137
+  },
+  {
+    "actual_target": 1,
+    "close": 3510.4313964844,
+    "correct": 1,
+    "date": "2024-06-20 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8108000159
+  },
+  {
+    "actual_target": 1,
+    "close": 3532.2136230469,
+    "correct": 1,
+    "date": "2024-06-21 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8763999939
+  },
+  {
+    "actual_target": 1,
+    "close": 3537.8220214844,
+    "correct": 1,
+    "date": "2024-06-24 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8467000127
+  },
+  {
+    "actual_target": 1,
+    "close": 3557.8889160156,
+    "correct": 1,
+    "date": "2024-06-25 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8700000048
+  },
+  {
+    "actual_target": 1,
+    "close": 3574.017578125,
+    "correct": 1,
+    "date": "2024-06-26 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8276000023
+  },
+  {
+    "actual_target": 0,
+    "close": 3646.5942382812,
+    "correct": 1,
+    "date": "2024-06-27 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2337000072
+  },
+  {
+    "actual_target": 1,
+    "close": 3618.7868652344,
+    "correct": 1,
+    "date": "2024-06-28 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7682999969
+  },
+  {
+    "actual_target": 1,
+    "close": 3687.4243164062,
+    "correct": 1,
+    "date": "2024-07-01 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7763000131
+  },
+  {
+    "actual_target": 0,
+    "close": 3723.7590332031,
+    "correct": 1,
+    "date": "2024-07-02 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1445000023
+  },
+  {
+    "actual_target": 1,
+    "close": 3675.4208984375,
+    "correct": 1,
+    "date": "2024-07-03 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8733999729
+  },
+  {
+    "actual_target": 0,
+    "close": 3727.0498046875,
+    "correct": 1,
+    "date": "2024-07-04 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2075999975
+  },
+  {
+    "actual_target": 0,
+    "close": 3718.5686035156,
+    "correct": 1,
+    "date": "2024-07-05 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1688999981
+  },
+  {
+    "actual_target": 0,
+    "close": 3701.328125,
+    "correct": 1,
+    "date": "2024-07-08 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1040000021
+  },
+  {
+    "actual_target": 0,
+    "close": 3694.1911621094,
+    "correct": 1,
+    "date": "2024-07-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1905000061
+  },
+  {
+    "actual_target": 1,
+    "close": 3623.4216308594,
+    "correct": 1,
+    "date": "2024-07-10 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8504999876
+  },
+  {
+    "actual_target": 1,
+    "close": 3636.908203125,
+    "correct": 1,
+    "date": "2024-07-11 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8435999751
+  },
+  {
+    "actual_target": 0,
+    "close": 3878.1359863281,
+    "correct": 1,
+    "date": "2024-07-12 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1257999986
+  },
+  {
+    "actual_target": 1,
+    "close": 3864.4641113281,
+    "correct": 1,
+    "date": "2024-07-15 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8090999722
+  },
+  {
+    "actual_target": 1,
+    "close": 3873.0380859375,
+    "correct": 1,
+    "date": "2024-07-16 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8751000166
+  },
+  {
+    "actual_target": 0,
+    "close": 4000.1166992188,
+    "correct": 1,
+    "date": "2024-07-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0755999982
+  },
+  {
+    "actual_target": 0,
+    "close": 3997.1906738281,
+    "correct": 1,
+    "date": "2024-07-19 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.133100003
+  },
+  {
+    "actual_target": 1,
+    "close": 3983.2077636719,
+    "correct": 1,
+    "date": "2024-07-22 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9409999847
+  },
+  {
+    "actual_target": 1,
+    "close": 3997.1440429688,
+    "correct": 1,
+    "date": "2024-07-23 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8787999749
+  },
+  {
+    "actual_target": 1,
+    "close": 4000.7670898438,
+    "correct": 1,
+    "date": "2024-07-24 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8582999706
+  },
+  {
+    "actual_target": 1,
+    "close": 4015.8640136719,
+    "correct": 1,
+    "date": "2024-07-25 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8806999922
+  },
+  {
+    "actual_target": 0,
+    "close": 4076.5788574219,
+    "correct": 1,
+    "date": "2024-07-26 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1865999997
+  },
+  {
+    "actual_target": 0,
+    "close": 4070.3076171875,
+    "correct": 1,
+    "date": "2024-07-29 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1697999984
+  },
+  {
+    "actual_target": 1,
+    "close": 4055.6748046875,
+    "correct": 1,
+    "date": "2024-07-30 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7189000249
+  },
+  {
+    "actual_target": 1,
+    "close": 4074.2563476562,
+    "correct": 1,
+    "date": "2024-07-31 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.6947000027
+  },
+  {
+    "actual_target": 0,
+    "close": 4085.1723632812,
+    "correct": 1,
+    "date": "2024-08-01 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1347000003
+  },
+  {
+    "actual_target": 0,
+    "close": 3979.212890625,
+    "correct": 1,
+    "date": "2024-08-02 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1167000011
+  },
+  {
+    "actual_target": 1,
+    "close": 3860.2932128906,
+    "correct": 1,
+    "date": "2024-08-05 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9255999923
+  },
+  {
+    "actual_target": 1,
+    "close": 3875.2973632812,
+    "correct": 1,
+    "date": "2024-08-06 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8461999893
+  },
+  {
+    "actual_target": 0,
+    "close": 3902.4724121094,
+    "correct": 1,
+    "date": "2024-08-07 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1577000022
+  },
+  {
+    "actual_target": 1,
+    "close": 3876.5512695312,
+    "correct": 1,
+    "date": "2024-08-08 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7987999916
+  },
+  {
+    "actual_target": 0,
+    "close": 3928.7646484375,
+    "correct": 1,
+    "date": "2024-08-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1890999973
+  },
+  {
+    "actual_target": 1,
+    "close": 3898.0126953125,
+    "correct": 1,
+    "date": "2024-08-12 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8633000255
+  },
+  {
+    "actual_target": 1,
+    "close": 3899.2209472656,
+    "correct": 1,
+    "date": "2024-08-13 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9060999751
+  },
+  {
+    "actual_target": 1,
+    "close": 3990.5476074219,
+    "correct": 1,
+    "date": "2024-08-14 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.894200027
+  },
+  {
+    "actual_target": 1,
+    "close": 4102.7783203125,
+    "correct": 1,
+    "date": "2024-08-16 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8612999916
+  },
+  {
+    "actual_target": 1,
+    "close": 4171.4819335938,
+    "correct": 1,
+    "date": "2024-08-19 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9309999943
+  },
+  {
+    "actual_target": 1,
+    "close": 4202.419921875,
+    "correct": 1,
+    "date": "2024-08-20 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.648999989
+  },
+  {
+    "actual_target": 0,
+    "close": 4228.6196289062,
+    "correct": 1,
+    "date": "2024-08-21 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1020999998
+  },
+  {
+    "actual_target": 0,
+    "close": 4182.630859375,
+    "correct": 1,
+    "date": "2024-08-22 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2213999927
+  },
+  {
+    "actual_target": 1,
+    "close": 4147.2333984375,
+    "correct": 1,
+    "date": "2024-08-23 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8745999932
+  },
+  {
+    "actual_target": 0,
+    "close": 4183.0493164062,
+    "correct": 1,
+    "date": "2024-08-26 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2728999853
+  },
+  {
+    "actual_target": 1,
+    "close": 4178.1254882812,
+    "correct": 1,
+    "date": "2024-08-27 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8536000252
+  },
+  {
+    "actual_target": 1,
+    "close": 4186.3940429688,
+    "correct": 1,
+    "date": "2024-08-28 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.888899982
+  },
+  {
+    "actual_target": 1,
+    "close": 4191.7353515625,
+    "correct": 1,
+    "date": "2024-08-29 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.6474999785
+  },
+  {
+    "actual_target": 0,
+    "close": 4230.7099609375,
+    "correct": 1,
+    "date": "2024-08-30 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.205400005
+  },
+  {
+    "actual_target": 0,
+    "close": 4200.3286132812,
+    "correct": 1,
+    "date": "2024-09-02 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0869000033
+  },
+  {
+    "actual_target": 0,
+    "close": 4192.24609375,
+    "correct": 1,
+    "date": "2024-09-03 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0445999987
+  },
+  {
+    "actual_target": 0,
+    "close": 4161.4951171875,
+    "correct": 1,
+    "date": "2024-09-04 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.063000001
+  },
+  {
+    "actual_target": 0,
+    "close": 4158.4287109375,
+    "correct": 1,
+    "date": "2024-09-05 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0595999993
+  },
+  {
+    "actual_target": 0,
+    "close": 4140.5908203125,
+    "correct": 1,
+    "date": "2024-09-06 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.189199999
+  },
+  {
+    "actual_target": 1,
+    "close": 4133.9013671875,
+    "correct": 0,
+    "date": "2024-09-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.4853000045
+  },
+  {
+    "actual_target": 0,
+    "close": 4188.0659179688,
+    "correct": 1,
+    "date": "2024-09-10 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1027999967
+  },
+  {
+    "actual_target": 1,
+    "close": 4161.5874023438,
+    "correct": 1,
+    "date": "2024-09-11 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7541000247
+  },
+  {
+    "actual_target": 1,
+    "close": 4197.2182617188,
+    "correct": 1,
+    "date": "2024-09-12 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.6593000293
+  },
+  {
+    "actual_target": 0,
+    "close": 4201.76953125,
+    "correct": 1,
+    "date": "2024-09-13 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.058699999
+  },
+  {
+    "actual_target": 0,
+    "close": 4193.0825195312,
+    "correct": 1,
+    "date": "2024-09-16 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0463000014
+  },
+  {
+    "actual_target": 0,
+    "close": 4186.0209960938,
+    "correct": 1,
+    "date": "2024-09-17 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0771000013
+  },
+  {
+    "actual_target": 0,
+    "close": 4037.8364257812,
+    "correct": 1,
+    "date": "2024-09-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1782000065
+  },
+  {
+    "actual_target": 0,
+    "close": 3991.3835449219,
+    "correct": 1,
+    "date": "2024-09-19 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0922000036
+  },
+  {
+    "actual_target": 0,
+    "close": 3980.9313964844,
+    "correct": 1,
+    "date": "2024-09-20 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1182999983
+  },
+  {
+    "actual_target": 1,
+    "close": 3965.6948242188,
+    "correct": 1,
+    "date": "2024-09-23 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8840000033
+  },
+  {
+    "actual_target": 1,
+    "close": 3968.2963867188,
+    "correct": 1,
+    "date": "2024-09-24 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9075999856
+  },
+  {
+    "actual_target": 1,
+    "close": 3971.501953125,
+    "correct": 1,
+    "date": "2024-09-25 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.855799973
+  },
+  {
+    "actual_target": 1,
+    "close": 3987.9929199219,
+    "correct": 1,
+    "date": "2024-09-26 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.798699975
+  },
+  {
+    "actual_target": 0,
+    "close": 4003.0432128906,
+    "correct": 1,
+    "date": "2024-09-27 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1876000017
+  },
+  {
+    "actual_target": 1,
+    "close": 3965.6948242188,
+    "correct": 1,
+    "date": "2024-09-30 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8507999778
+  },
+  {
+    "actual_target": 0,
+    "close": 3983.7189941406,
+    "correct": 1,
+    "date": "2024-10-01 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1444000006
+  },
+  {
+    "actual_target": 1,
+    "close": 3932.4807128906,
+    "correct": 1,
+    "date": "2024-10-03 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8022000194
+  },
+  {
+    "actual_target": 1,
+    "close": 3950.5981445312,
+    "correct": 1,
+    "date": "2024-10-04 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7012000084
+  },
+  {
+    "actual_target": 0,
+    "close": 3969.7370605469,
+    "correct": 1,
+    "date": "2024-10-07 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1140000001
+  },
+  {
+    "actual_target": 0,
+    "close": 3951.5270996094,
+    "correct": 1,
+    "date": "2024-10-08 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.123300001
+  },
+  {
+    "actual_target": 0,
+    "close": 3951.2485351562,
+    "correct": 1,
+    "date": "2024-10-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0359000005
+  },
+  {
+    "actual_target": 0,
+    "close": 3927.5104980469,
+    "correct": 1,
+    "date": "2024-10-10 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0957999974
+  },
+  {
+    "actual_target": 0,
+    "close": 3854.8581542969,
+    "correct": 1,
+    "date": "2024-10-11 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0842000023
+  },
+  {
+    "actual_target": 0,
+    "close": 3843.1982421875,
+    "correct": 1,
+    "date": "2024-10-14 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0984999985
+  },
+  {
+    "actual_target": 0,
+    "close": 3824.7561035156,
+    "correct": 1,
+    "date": "2024-10-15 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2475000024
+  },
+  {
+    "actual_target": 1,
+    "close": 3804.4565429688,
+    "correct": 1,
+    "date": "2024-10-16 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8873000145
+  },
+  {
+    "actual_target": 1,
+    "close": 3817.5100097656,
+    "correct": 1,
+    "date": "2024-10-17 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7628999949
+  },
+  {
+    "actual_target": 0,
+    "close": 3839.9079589844,
+    "correct": 1,
+    "date": "2024-10-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0812000036
+  },
+  {
+    "actual_target": 0,
+    "close": 3799.6748046875,
+    "correct": 1,
+    "date": "2024-10-21 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2509000003
+  },
+  {
+    "actual_target": 1,
+    "close": 3739.7438964844,
+    "correct": 1,
+    "date": "2024-10-22 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8899999857
+  },
+  {
+    "actual_target": 0,
+    "close": 3787.0087890625,
+    "correct": 1,
+    "date": "2024-10-23 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1404999942
+  },
+  {
+    "actual_target": 1,
+    "close": 3769.9191894531,
+    "correct": 1,
+    "date": "2024-10-24 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9276999831
+  },
+  {
+    "actual_target": 1,
+    "close": 3778.9064941406,
+    "correct": 1,
+    "date": "2024-10-25 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.88349998
+  },
+  {
+    "actual_target": 0,
+    "close": 3809.9194335938,
+    "correct": 1,
+    "date": "2024-10-28 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.133100003
+  },
+  {
+    "actual_target": 1,
+    "close": 3795.390625,
+    "correct": 1,
+    "date": "2024-10-29 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7943000197
+  },
+  {
+    "actual_target": 0,
+    "close": 3804.1455078125,
+    "correct": 1,
+    "date": "2024-10-30 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2238000035
+  },
+  {
+    "actual_target": 1,
+    "close": 3695.9250488281,
+    "correct": 1,
+    "date": "2024-10-31 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8406000137
+  },
+  {
+    "actual_target": 0,
+    "close": 3710.59375,
+    "correct": 1,
+    "date": "2024-11-01 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2504000068
+  },
+  {
+    "actual_target": 1,
+    "close": 3691.9201660156,
+    "correct": 1,
+    "date": "2024-11-04 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8816999793
+  },
+  {
+    "actual_target": 1,
+    "close": 3698.6262207031,
+    "correct": 1,
+    "date": "2024-11-05 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8984000087
+  },
+  {
+    "actual_target": 1,
+    "close": 3855.3681640625,
+    "correct": 1,
+    "date": "2024-11-06 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8414999843
+  },
+  {
+    "actual_target": 0,
+    "close": 3865.8454589844,
+    "correct": 1,
+    "date": "2024-11-07 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.145600006
+  },
+  {
+    "actual_target": 1,
+    "close": 3862.2136230469,
+    "correct": 1,
+    "date": "2024-11-08 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.725300014
+  },
+  {
+    "actual_target": 0,
+    "close": 3910.3637695312,
+    "correct": 1,
+    "date": "2024-11-11 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1027999967
+  },
+  {
+    "actual_target": 0,
+    "close": 3909.15234375,
+    "correct": 1,
+    "date": "2024-11-12 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.0820999965
+  },
+  {
+    "actual_target": 0,
+    "close": 3865.3337402344,
+    "correct": 1,
+    "date": "2024-11-13 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1777999997
+  },
+  {
+    "actual_target": 0,
+    "close": 3861.1889648438,
+    "correct": 1,
+    "date": "2024-11-14 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1441999972
+  },
+  {
+    "actual_target": 1,
+    "close": 3743.4694824219,
+    "correct": 1,
+    "date": "2024-11-18 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.825699985
+  },
+  {
+    "actual_target": 1,
+    "close": 3762.142578125,
+    "correct": 1,
+    "date": "2024-11-19 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9140999913
+  },
+  {
+    "actual_target": 1,
+    "close": 3793.1557617188,
+    "correct": 1,
+    "date": "2024-11-21 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8127999902
+  },
+  {
+    "actual_target": 1,
+    "close": 3953.111328125,
+    "correct": 1,
+    "date": "2024-11-22 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8544999957
+  },
+  {
+    "actual_target": 1,
+    "close": 4018.7700195312,
+    "correct": 1,
+    "date": "2024-11-25 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.826399982
+  },
+  {
+    "actual_target": 0,
+    "close": 4053.7878417969,
+    "correct": 1,
+    "date": "2024-11-26 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1459999979
+  },
+  {
+    "actual_target": 0,
+    "close": 4035.0209960938,
+    "correct": 1,
+    "date": "2024-11-27 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1206
+  },
+  {
+    "actual_target": 1,
+    "close": 3953.390625,
+    "correct": 1,
+    "date": "2024-11-28 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9028999805
+  },
+  {
+    "actual_target": 1,
+    "close": 3977.5583496094,
+    "correct": 1,
+    "date": "2024-11-29 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9168000221
+  },
+  {
+    "actual_target": 1,
+    "close": 3982.9602050781,
+    "correct": 1,
+    "date": "2024-12-02 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8342000246
+  },
+  {
+    "actual_target": 1,
+    "close": 4007.2680664062,
+    "correct": 1,
+    "date": "2024-12-03 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.9100999832
+  },
+  {
+    "actual_target": 1,
+    "close": 4055.3715820312,
+    "correct": 1,
+    "date": "2024-12-04 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8234000206
+  },
+  {
+    "actual_target": 0,
+    "close": 4157.4907226562,
+    "correct": 1,
+    "date": "2024-12-05 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.141200006
+  },
+  {
+    "actual_target": 1,
+    "close": 4140.21484375,
+    "correct": 1,
+    "date": "2024-12-06 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7670999765
+  },
+  {
+    "actual_target": 0,
+    "close": 4146.4077148438,
+    "correct": 1,
+    "date": "2024-12-09 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1513999999
+  },
+  {
+    "actual_target": 0,
+    "close": 4128.154296875,
+    "correct": 1,
+    "date": "2024-12-10 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2057999969
+  },
+  {
+    "actual_target": 1,
+    "close": 4123.404296875,
+    "correct": 1,
+    "date": "2024-12-11 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8417000175
+  },
+  {
+    "actual_target": 1,
+    "close": 4149.015625,
+    "correct": 1,
+    "date": "2024-12-12 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8546000123
+  },
+  {
+    "actual_target": 0,
+    "close": 4166.6645507812,
+    "correct": 1,
+    "date": "2024-12-13 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1027999967
+  },
+  {
+    "actual_target": 0,
+    "close": 4111.99609375,
+    "correct": 1,
+    "date": "2024-12-16 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1629000008
+  },
+  {
+    "actual_target": 1,
+    "close": 4031.2502441406,
+    "correct": 1,
+    "date": "2024-12-17 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.7713000178
+  },
+  {
+    "actual_target": 0,
+    "close": 4049.2705078125,
+    "correct": 1,
+    "date": "2024-12-18 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.266200006
+  },
+  {
+    "actual_target": 0,
+    "close": 3978.5366210938,
+    "correct": 1,
+    "date": "2024-12-19 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1361999959
+  },
+  {
+    "actual_target": 0,
+    "close": 3883.9133300781,
+    "correct": 1,
+    "date": "2024-12-20 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1190000027
+  },
+  {
+    "actual_target": 1,
+    "close": 3872.7375488281,
+    "correct": 1,
+    "date": "2024-12-23 00:00:00.000000",
+    "predicted_up": 1,
+    "prob_up": 0.8123000264
+  },
+  {
+    "actual_target": 0,
+    "close": 3892.4819335938,
+    "correct": 1,
+    "date": "2024-12-24 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.2312999964
+  },
+  {
+    "actual_target": 0,
+    "close": 3882.7958984375,
+    "correct": 1,
+    "date": "2024-12-26 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1062999964
+  },
+  {
+    "actual_target": 0,
+    "close": 3878.8383789062,
+    "correct": 1,
+    "date": "2024-12-27 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.1162
+  },
+  {
+    "actual_target": 0,
+    "close": 3873.2033691406,
+    "correct": 1,
+    "date": "2024-12-30 00:00:00.000000",
+    "predicted_up": 0,
+    "prob_up": 0.112999998
+  }
+]

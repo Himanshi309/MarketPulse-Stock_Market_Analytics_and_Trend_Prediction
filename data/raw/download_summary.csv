@@ -1,0 +1,6 @@
+Ticker,Rows,Start,End,File
+RELIANCE.NS,1726,2018-01-01,2024-12-30,C:\Users\HImanshi\OneDrive\Desktop\MarketPulse-Stock_Market_Analytics_and_Trend_Prediction\pipeline\..\data\raw\RELIANCE_NS.csv
+TCS.NS,1726,2018-01-01,2024-12-30,C:\Users\HImanshi\OneDrive\Desktop\MarketPulse-Stock_Market_Analytics_and_Trend_Prediction\pipeline\..\data\raw\TCS_NS.csv
+INFY.NS,1726,2018-01-01,2024-12-30,C:\Users\HImanshi\OneDrive\Desktop\MarketPulse-Stock_Market_Analytics_and_Trend_Prediction\pipeline\..\data\raw\INFY_NS.csv
+HDFCBANK.NS,1726,2018-01-01,2024-12-30,C:\Users\HImanshi\OneDrive\Desktop\MarketPulse-Stock_Market_Analytics_and_Trend_Prediction\pipeline\..\data\raw\HDFCBANK_NS.csv
+ICICIBANK.NS,1726,2018-01-01,2024-12-30,C:\Users\HImanshi\OneDrive\Desktop\MarketPulse-Stock_Market_Analytics_and_Trend_Prediction\pipeline\..\data\raw\ICICIBANK_NS.csv
