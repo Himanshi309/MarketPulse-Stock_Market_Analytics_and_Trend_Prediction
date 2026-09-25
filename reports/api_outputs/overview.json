@@ -1,0 +1,42 @@
+[
+  {
+    "change_pct": -0.85,
+    "close": 1200.33,
+    "date": "2024-12-30 00:00:00.000000",
+    "name": "Reliance",
+    "ticker": "RELIANCE.NS",
+    "volume": 8818766
+  },
+  {
+    "change_pct": -0.15,
+    "close": 3873.2,
+    "date": "2024-12-30 00:00:00.000000",
+    "name": "TCS",
+    "ticker": "TCS.NS",
+    "volume": 1527169
+  },
+  {
+    "change_pct": -0.56,
+    "close": 1812.0,
+    "date": "2024-12-30 00:00:00.000000",
+    "name": "Infosys",
+    "ticker": "INFY.NS",
+    "volume": 7789055
+  },
+  {
+    "change_pct": -1.13,
+    "close": 862.82,
+    "date": "2024-12-30 00:00:00.000000",
+    "name": "HDFC Bank",
+    "ticker": "HDFCBANK.NS",
+    "volume": 22222218
+  },
+  {
+    "change_pct": -0.99,
+    "close": 1274.0,
+    "date": "2024-12-30 00:00:00.000000",
+    "name": "ICICI Bank",
+    "ticker": "ICICIBANK.NS",
+    "volume": 14207425
+  }
+]

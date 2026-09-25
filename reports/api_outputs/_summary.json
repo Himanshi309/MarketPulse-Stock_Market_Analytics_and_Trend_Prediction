@@ -1,0 +1,148 @@
+{
+  "health": {
+    "db": true,
+    "status": "ok"
+  },
+  "tickers_count": 5,
+  "overview": [
+    {
+      "change_pct": -0.85,
+      "close": 1200.33,
+      "date": "2024-12-30 00:00:00.000000",
+      "name": "Reliance",
+      "ticker": "RELIANCE.NS",
+      "volume": 8818766
+    },
+    {
+      "change_pct": -0.15,
+      "close": 3873.2,
+      "date": "2024-12-30 00:00:00.000000",
+      "name": "TCS",
+      "ticker": "TCS.NS",
+      "volume": 1527169
+    },
+    {
+      "change_pct": -0.56,
+      "close": 1812.0,
+      "date": "2024-12-30 00:00:00.000000",
+      "name": "Infosys",
+      "ticker": "INFY.NS",
+      "volume": 7789055
+    },
+    {
+      "change_pct": -1.13,
+      "close": 862.82,
+      "date": "2024-12-30 00:00:00.000000",
+      "name": "HDFC Bank",
+      "ticker": "HDFCBANK.NS",
+      "volume": 22222218
+    },
+    {
+      "change_pct": -0.99,
+      "close": 1274.0,
+      "date": "2024-12-30 00:00:00.000000",
+      "name": "ICICI Bank",
+      "ticker": "ICICIBANK.NS",
+      "volume": 14207425
+    }
+  ],
+  "backtest": [
+    {
+      "avg_loss_%": -0.4102,
+      "avg_win_%": 0.8486,
+      "bnh_cagr_%": 14.66,
+      "bnh_maxdd_%": -19.03,
+      "bnh_sharpe": 0.479,
+      "bnh_total_return_%": 18.07,
+      "n_long_days": 96,
+      "n_test_days": 306,
+      "profit_factor": 47.585,
+      "strat_cagr_%": 86.74,
+      "strat_maxdd_%": -1.45,
+      "strat_sharpe": 6.272,
+      "strat_total_return_%": 113.48,
+      "test_end": "2024-12-30",
+      "test_start": "2023-09-29",
+      "ticker": "HDFCBANK.NS",
+      "win_rate_%": 95.83
+    },
+    {
+      "avg_loss_%": 0.0,
+      "avg_win_%": 0.9273,
+      "bnh_cagr_%": 29.74,
+      "bnh_maxdd_%": -8.63,
+      "bnh_sharpe": 1.108,
+      "bnh_total_return_%": 37.18,
+      "n_long_days": 167,
+      "n_test_days": 306,
+      "profit_factor": null,
+      "strat_cagr_%": 253.95,
+      "strat_maxdd_%": 0.0,
+      "strat_sharpe": 9.451,
+      "strat_total_return_%": 364.06,
+      "test_end": "2024-12-30",
+      "test_start": "2023-09-29",
+      "ticker": "ICICIBANK.NS",
+      "win_rate_%": 100.0
+    },
+    {
+      "avg_loss_%": -0.9252,
+      "avg_win_%": 1.0077,
+      "bnh_cagr_%": 30.96,
+      "bnh_maxdd_%": -18.4,
+      "bnh_sharpe": 1.05,
+      "bnh_total_return_%": 38.75,
+      "n_long_days": 74,
+      "n_test_days": 306,
+      "profit_factor": 1.281,
+      "strat_cagr_%": 6.82,
+      "strat_maxdd_%": -11.05,
+      "strat_sharpe": 0.123,
+      "strat_total_return_%": 8.34,
+      "test_end": "2024-12-30",
+      "test_start": "2023-09-29",
+      "ticker": "INFY.NS",
+      "win_rate_%": 54.05
+    },
+    {
+      "avg_loss_%": 0.0,
+      "avg_win_%": 0.9452,
+      "bnh_cagr_%": 2.96,
+      "bnh_maxdd_%": -24.46,
+      "bnh_sharpe": -0.029,
+      "bnh_total_return_%": 3.61,
+      "n_long_days": 159,
+      "n_test_days": 306,
+      "profit_factor": null,
+      "strat_cagr_%": 240.81,
+      "strat_maxdd_%": 0.0,
+      "strat_sharpe": 8.93,
+      "strat_total_return_%": 343.22,
+      "test_end": "2024-12-30",
+      "test_start": "2023-09-29",
+      "ticker": "RELIANCE.NS",
+      "win_rate_%": 100.0
+    },
+    {
+      "avg_loss_%": 0.0,
+      "avg_win_%": 1.0306,
+      "bnh_cagr_%": 16.54,
+      "bnh_maxdd_%": -12.74,
+      "bnh_sharpe": 0.559,
+      "bnh_total_return_%": 20.42,
+      "n_long_days": 150,
+      "n_test_days": 306,
+      "profit_factor": null,
+      "strat_cagr_%": 252.61,
+      "strat_maxdd_%": 0.0,
+      "strat_sharpe": 8.605,
+      "strat_total_return_%": 361.93,
+      "test_end": "2024-12-30",
+      "test_start": "2023-09-29",
+      "ticker": "TCS.NS",
+      "win_rate_%": 100.0
+    }
+  ],
+  "model_metrics_count": 20,
+  "endpoints_hit": 25
+}
